@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Dad!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fef5e7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+            flex-direction: column;
+        }
+        .play-button-container {
+            margin-bottom: 20px; /* Space between the button and the card */
+        }
+        .play-button {
+        background-color: #f39c12; /* Matches the card border */
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, transform 0.2s;
+        }
+        .play-button:hover {
+            background-color: #e67e22; /* Slightly darker shade for hover */
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+        .play-button:active {
+            background-color: #d35400; /* Even darker shade for click */
+            transform: scale(0.95); /* Pressed-in effect */
+        }
+        .card {
+            background: #fff;
+            border: 2px solid #f39c12;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 500px;
+        }
+        .header {
+            font-size: 24px;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        .message {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .footer {
+            font-size: 14px;
+            color: #888;
+        }
+        .balloons {
+            margin: 20px 0;
+            height: 200px;
+        }
+        .balloons img {
+            width: 120px;
+            height: 190px;
+            margin: 15px;
+        }
+        .dad-photo {
+            width: 150px; /* Adjust size as needed */
+            height: 200px;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+        }
+        
+    </style>
+    
+</head>
+<body>    
+    <audio autoplay id="music">
+        <source src="birthday_song.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="music">
+        <source src="birthday_song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <div class="play-button-container">
+        <button class="play-button" onclick="playAudio()">Play the Birthday Song 🎵</button>
+    </div>
+    
+    <script>
+        function playAudio() {
+            const audio = document.getElementById('music');
+            audio.play().catch(error => {
+                console.log('Playback failed:', error);
+            });
+        }
+    </script>
+
+    <div class="card">
+        <div class="header">🎉 Happy 60th Birthday, Dad! 🎂</div>
+        <div class="balloons">
+            <img src="https://cdn.media.amplience.net/i/partycity/N237864_50ct-5in%20-%20Standard?$pdpSmall$&fmt=auto&qlt=default" alt="Balloon">
+            <img src="Dad.jpg" alt="Happy Birthday Dad!" class="dad-photo">
+            <img src="https://cdn.media.amplience.net/i/partycity/N237864_50ct-5in%20-%20Standard?$pdpSmall$&fmt=auto&qlt=default" alt="Balloon">
+        </div>
+        <div class="message">
+            Thank you for all of the lessons you've taught me, the memories that we share, and all of the sacrafices you've made.
+            I'm so proud to call you my dad, and I hope you have the happiest of birthdays!!
+        </div>
+        <div class="footer">From, your son<br>
+        Liam</div>
+    </div>
+</body>
+</html>
